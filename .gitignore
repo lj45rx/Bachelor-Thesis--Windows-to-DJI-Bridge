@@ -1,0 +1,15 @@
+# ignore all 
+/*
+/*/
+
+# except (root files)
+.gitignore
+
+# except (root folders)
+!/DroneControlWindows/
+!/MAV2DJI/
+
+# but ignore
+/MAV2DJI/.gradle/*
+/MAV2DJI/.idea/*
+/MAV2DJI/build/*

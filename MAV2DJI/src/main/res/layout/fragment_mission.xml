@@ -1,0 +1,49 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mst.mav2dvi.fragments.FragmentMission">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editText_missionStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:maxLines="4"
+            android:minLines="4"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/button_missionStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start" />
+
+        <Button
+            android:id="@+id/button_missionPause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="pause" />
+
+        <Button
+            android:id="@+id/button_missionResume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="resume" />
+
+        <Button
+            android:id="@+id/button_missionStop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="stop" />
+
+    </LinearLayout>
+
+</FrameLayout>

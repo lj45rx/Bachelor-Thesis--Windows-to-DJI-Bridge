@@ -1,0 +1,99 @@
+###########################################################
+#Lines starting with '#' are ignored 
+#
+#Allowed Commands:
+#   Mission:
+#       waypointCount
+#           > integer
+#       autoFlightSpeed
+#           > float [0,15]m/s
+#       maxFlightSpeed
+#           > float [2,15]m/s
+#       goToFirstWpMode
+#           > safely
+#           > pointToPoint
+#       pointOfInterest
+#           > float<lat> float<lon>
+#       headingMode
+#           > auto
+#           > initial
+#           > remote
+#           > wpHeading
+#           > pointOfInterest
+#       gimbalPitchEnabled
+#           > true | false
+#       flightPathMode
+#           > normal
+#           > curved
+#       finishedAction
+#           > noAction
+#           > goHome
+#           > autoland
+#           > goToFirstWp
+#           > continue
+#       repeatTimes 
+#           > integer (repeat = 1 -> run mission 2 times)
+#       exitOnRcLost
+#           > true | false
+#
+#   Waypoints:
+#     New waypoint:
+#       wp <lat> <lon> <alt>
+#           eg wp 49.1413 8.9228 20
+#
+#     Options:
+#       hdg (heading)
+#           > integer [-180,180] (0 = north)
+#       spd (speed)
+#       (overwrite mission speed until next wp)
+#           > float [0,15]
+#       gim (gimbalPitch)
+#           > float [-90, 0]
+#       (gimbalPitchEnabled for mission must be true)
+#       
+#     Actions:
+#       action stay
+#           > int [0, 32767] milliseconds
+#       action rotate
+#           > int [-180, 180]
+#       action gimPitch
+#           > int [-90, 0]
+#       action photo
+#       action strtRec
+#       action stopRec
+#
+###########################################################
+
+#general mission options
+
+waypointCount 9
+maxSpeed 15
+autoSpeed 5
+headingMode waypoint
+goToFirstWaypointMode safely
+flightPathMode normal
+exitOnRcSignalLost false
+gimbalPitchRotationEnabled true
+finishAction goHome
+repeatTimes 0
+pointOfInterest 49.123 8.987
+
+
+#list of waypoints
+
+#wp with options
+wp 49.1313 8.9128 10
+    heading 80
+    speed 10
+    action stay 2000
+    action photo
+
+#wps without options
+wp 49.1413 8.9228 20
+wp 49.1513 8.9328 30
+wp 49.1613 8.9428 40
+wp 49.1713 8.9528 50
+wp 49.1813 8.9628 60
+wp 49.1913 8.9728 70
+wp 49.2013 8.9828 80
+wp 49.2113 8.9928 90
